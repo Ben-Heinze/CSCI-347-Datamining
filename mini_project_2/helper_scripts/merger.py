@@ -1,6 +1,6 @@
 import os
 
-file_path = "mini_project_2/datasets/split"
+file_path = "../datasets/split"
 
 def merge_tsv_files(split_dir, output_filename):
     files_to_merge = [os.path.join(split_dir, f'part_{i+1}.tsv') for i in range(4)]
@@ -17,5 +17,5 @@ def merge_tsv_files(split_dir, output_filename):
                     output_file.writelines(lines[1:])
 
 
-output_file_path = "mini_project_2/datasets/soc-redditHyperlinks-body.tsv"
+output_file_path = "../datasets/soc-redditHyperlinks-body.tsv"
 merge_tsv_files(file_path, output_file_path)
